@@ -1,0 +1,37 @@
+#include <iostream> 
+#include <string> 
+ using namespace std;
+ 
+class Person { 
+protected: 
+    string name; 
+ 
+public: 
+    explicit Person(string personName) : name(move(personName)) {} 
+ 
+    void displayName() const { 
+        cout << "Name: " << name << '\n'; 
+    } 
+}; 
+ 
+class Student : virtual public Person { 
+public: 
+    Student() : Person("Unknown") {} 
+}; 
+ 
+class Employee : virtual public Person { 
+public: 
+    Employee() : Person("Unknown") {} 
+}; 
+ 
+class TeachingAssistant : public Student, public Employee { 
+public: 
+    explicit TeachingAssistant(std::string assistantName) 
+        : Person(std::move(assistantName)), Student(), Employee() {} 
+}; 
+ 
+int main() { 
+    TeachingAssistant assistant("SARTH"); 
+    assistant.displayName(); 
+    return 0; 
+}
