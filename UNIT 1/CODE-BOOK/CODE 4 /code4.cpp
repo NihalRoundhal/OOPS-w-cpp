@@ -1,12 +1,16 @@
 #include <iostream>
 using namespace std;
 
-int main() {
-    int marks[5] = {78, 82, 91, 67, 88};
+int add(int, int);
 
-    for (int i = 0; i < 5; i++) {
-        cout << marks[i] << " ";
-    }
+int main() {
+    int a = 10, b = 20;
+
+    cout << "Sum = " << add(a, b) << endl;
 
     return 0;
+}
+
+int add(int x, int y) {
+    return x + y;
 }
