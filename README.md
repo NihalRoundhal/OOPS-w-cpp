@@ -1,4 +1,4 @@
-# OOPS-reaLife-Usage
+# OOPS-with-C++
 # 🎓 Object-Oriented Programming with C++
 
 > **C++ Practical Repository | Real-Life Applications of OOP Concepts**
